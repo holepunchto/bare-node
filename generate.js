@@ -33,7 +33,7 @@ for (const name of Module.builtinModules) {
   const deps = bare[name] ? `"${bare[name]}": "*"` : ''
 
   if (bare[name]) {
-    list += `* ${name}: [${bare[name]}](https://github.com/holepunchto/${bare[name]} (npm:${compat})\n`
+    list += `* \`${name}\`: [\`${bare[name]}\`](https://github.com/holepunchto/${bare[name]}) (through \`npm:${compat})\`\n`
     all += `  "${bare[name]}": "^${require('child_process').execSync('npm view ' + bare[name] + ' version').toString().trim()}"\n`
     all += `  "${name}": "npm:${compat}"\n`
   }
