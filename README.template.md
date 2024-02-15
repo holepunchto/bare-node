@@ -33,24 +33,25 @@ Using the wrapper saves you space as it means npm will only include `bare-fs` on
 When writing a module that uses `fs` you can also choose to specify directly in that
 module what `fs` should map to instead of relying on the compat. You would do that using an import map.
 
-For example Hypercore uses `events` and to work in both bare and node it adds the following import map
+For example [Localdrive](https://github.com/holepunchto/localdrive) uses `fs` and to work in both Bare and Node.js it adds the following import map
 to package.json
 
 ```json
 {
   "imports": {
     "events": {
-      "bare": "bare-events",
-      "default": "events"
+      "bare": "bare-fs",
+      "default": "fs"
     }
   },
   "optionalDependencies": {
-    "bare-events": "^2.2.0"
+    "bare-fs": "^2.1.5"
   }
 }
 ```
 
-Note that this way the module is in FULL control of exactly which version of events it wants to bind to in Bare.
+This way the module is in FULL control of exactly which version of `fs` it wants to bind to in Bare.
+
 If you can, this is the best option as it provides the best of all worlds. Node.js compat, but full control of your dependencies.
 
 Say goodbye to broken apps and modules due to Node.js core changes.
