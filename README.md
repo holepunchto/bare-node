@@ -73,29 +73,31 @@ To get the full Node.js compat layer that Bare currently supports add the follow
 
 ```json
 {
-  "bare-subprocess": "^2.0.4"
-  "child_process": "npm:bare-node-child-process"
-  "bare-console": "^4.1.0"
-  "console": "npm:bare-node-console"
-  "bare-events": "^2.2.0"
-  "events": "npm:bare-node-events"
-  "bare-fs": "^2.1.5"
-  "fs": "npm:bare-node-fs"
-  "bare-http1": "^2.0.3"
-  "http": "npm:bare-node-http"
-  "bare-inspector": "^1.1.2"
-  "inspector": "npm:bare-node-inspector"
-  "bare-os": "^2.2.0"
-  "os": "npm:bare-node-os"
-  "bare-path": "^2.1.0"
-  "path": "npm:bare-node-path"
-  "bare-process": "^1.3.0"
-  "process": "npm:bare-node-process"
-  "bare-readline": "^1.0.0"
-  "readline": "npm:bare-node-readline"
-  "bare-repl": "^1.0.3"
-  "repl": "npm:bare-node-repl"
-  "bare-url": "^1.0.5"
-  "url": "npm:bare-node-url"
+  "dependencies": {
+    "bare-subprocess": "^2.0.4",
+    "child_process": "npm:bare-node-child-process",
+    "bare-console": "^4.1.0",
+    "console": "npm:bare-node-console",
+    "bare-events": "^2.2.0",
+    "events": "npm:bare-node-events",
+    "bare-fs": "^2.1.5",
+    "fs": "npm:bare-node-fs",
+    "bare-http1": "^2.0.3",
+    "http": "npm:bare-node-http",
+    "bare-inspector": "^1.1.2",
+    "inspector": "npm:bare-node-inspector",
+    "bare-os": "^2.2.0",
+    "os": "npm:bare-node-os",
+    "bare-path": "^2.1.0",
+    "path": "npm:bare-node-path",
+    "bare-process": "^1.3.0",
+    "process": "npm:bare-node-process",
+    "bare-readline": "^1.0.0",
+    "readline": "npm:bare-node-readline",
+    "bare-repl": "^1.0.3",
+    "repl": "npm:bare-node-repl",
+    "bare-url": "^1.0.5",
+    "url": "npm:bare-node-url"
+  }
 }
 ```
