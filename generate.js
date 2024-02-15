@@ -34,8 +34,8 @@ for (const name of Module.builtinModules) {
 
   if (bare[name]) {
     list += `* \`${name}\`: [\`${bare[name]}\`](https://github.com/holepunchto/${bare[name]}) (through \`npm:${compat})\`\n`
-    all += `  "${bare[name]}": "^${require('child_process').execSync('npm view ' + bare[name] + ' version').toString().trim()}"\n`
-    all += `  "${name}": "npm:${compat}"\n`
+    all += `  "${bare[name]}": "^${require('child_process').execSync('npm view ' + bare[name] + ' version').toString().trim()}",\n`
+    all += `  "${name}": "npm:${compat}",\n`
   }
 
   publish.push(compat)
@@ -47,7 +47,7 @@ for (const name of Module.builtinModules) {
   else fs.writeFileSync('modules/' + compat + '/index.js', `throw new Error('${name} compat is not yet supported')`)
 }
 
-all += '}\n'
+all.trim().replace(/,$/g, '') += '\n}'
 
 if (process.argv.includes('--publish')) {
   for (const name of publish) {
