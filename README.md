@@ -16,6 +16,7 @@ Currently supported are
 * `process`: [`bare-process`](https://github.com/holepunchto/bare-process) (through `npm:bare-node-process)`
 * `readline`: [`bare-readline`](https://github.com/holepunchto/bare-readline) (through `npm:bare-node-readline)`
 * `repl`: [`bare-repl`](https://github.com/holepunchto/bare-repl) (through `npm:bare-node-repl)`
+* `tty`: [`bare-tty`](https://github.com/holepunchto/bare-tty) (through `npm:bare-node-tty)`
 * `url`: [`bare-url`](https://github.com/holepunchto/bare-url) (through `npm:bare-node-url)`
 
 ## Example, support `fs`
@@ -96,7 +97,9 @@ To get the full Node.js compat layer that Bare currently supports add the follow
     "readline": "npm:bare-node-readline",
     "bare-repl": "^1.0.3",
     "repl": "npm:bare-node-repl",
-    "bare-url": "^1.0.5",
+    "bare-tty": "^3.2.0",
+    "tty": "npm:bare-node-tty",
+    "bare-url": "^1.0.7",
     "url": "npm:bare-node-url"
   }
 }

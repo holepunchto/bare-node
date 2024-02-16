@@ -13,7 +13,8 @@ const bare = {
   repl: 'bare-repl',
   inspector: 'bare-inspector',
   process: 'bare-process',
-  console: 'bare-console'
+  console: 'bare-console',
+  tty: 'bare-tty'
 }
 
 fs.rmSync('modules', { force: true, recursive: true })
