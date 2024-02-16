@@ -1,1 +1,10 @@
-{ "name": "bare-node-constants", "version": "0.0.0", "description": "bare compat for constants", "dependencies": {}, "license": "Apache-2.0" }
+{
+  "name": "bare-node-constants",
+  "version": "0.0.0",
+  "description": "bare compat for constants",
+  "homepage": "https://github.com/holepunchto/bare-node"
+  "dependencies": {
+    
+  },
+  "license": "Apache-2.0"
+}

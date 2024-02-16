@@ -1,1 +1,10 @@
-{ "name": "bare-node-worker-threads", "version": "0.0.0", "description": "bare compat for worker_threads", "dependencies": {}, "license": "Apache-2.0" }
+{
+  "name": "bare-node-worker-threads",
+  "version": "0.0.0",
+  "description": "bare compat for worker_threads",
+  "homepage": "https://github.com/holepunchto/bare-node"
+  "dependencies": {
+    
+  },
+  "license": "Apache-2.0"
+}

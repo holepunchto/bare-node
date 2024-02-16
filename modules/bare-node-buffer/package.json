@@ -1,1 +1,10 @@
-{ "name": "bare-node-buffer", "version": "0.0.0", "description": "bare compat for buffer", "dependencies": {}, "license": "Apache-2.0" }
+{
+  "name": "bare-node-buffer",
+  "version": "0.0.0",
+  "description": "bare compat for buffer",
+  "homepage": "https://github.com/holepunchto/bare-node"
+  "dependencies": {
+    
+  },
+  "license": "Apache-2.0"
+}

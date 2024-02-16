@@ -44,7 +44,9 @@ for (const name of Module.builtinModules) {
   publish.push(compat)
 
   fs.mkdirSync('modules/' + compat)
-  fs.writeFileSync('modules/' + compat + '/package.json', `{ "name": "${compat}", "version": "${v}", "description": "bare compat for ${name}", "dependencies": {${deps}}, "license": "Apache-2.0" }\n`)
+  if (!fs.existsSync('modules/' + compat + '/package.json')) {
+    fs.writeFileSync('modules/' + compat + '/package.json', `{\n  "name": "${compat}",\n  "version": "${v}",\n  "description": "bare compat for ${name}",\n  "homepage": "https://github.com/holepunchto/bare-node"\n  "dependencies": {\n    ${deps}\n  },\n  "license": "Apache-2.0"\n}\n`)
+  }
 
   if (bare[name]) {
     fs.writeFileSync('modules/' + compat + '/index.js', `module.exports = require('${bare[name]}')`)

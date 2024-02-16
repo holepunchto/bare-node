@@ -1,1 +1,10 @@
-{ "name": "bare-node-os", "version": "1.0.0", "description": "bare compat for os", "dependencies": {"bare-os": "*"}, "license": "Apache-2.0" }
+{
+  "name": "bare-node-os",
+  "version": "1.0.0",
+  "description": "bare compat for os",
+  "homepage": "https://github.com/holepunchto/bare-node"
+  "dependencies": {
+    "bare-os": "*"
+  },
+  "license": "Apache-2.0"
+}

@@ -1,1 +1,10 @@
-{ "name": "bare-node-crypto", "version": "0.0.0", "description": "bare compat for crypto", "dependencies": {}, "license": "Apache-2.0" }
+{
+  "name": "bare-node-crypto",
+  "version": "0.0.0",
+  "description": "bare compat for crypto",
+  "homepage": "https://github.com/holepunchto/bare-node"
+  "dependencies": {
+    
+  },
+  "license": "Apache-2.0"
+}

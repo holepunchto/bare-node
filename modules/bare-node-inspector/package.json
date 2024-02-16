@@ -1,1 +1,10 @@
-{ "name": "bare-node-inspector", "version": "1.0.0", "description": "bare compat for inspector", "dependencies": {"bare-inspector": "*"}, "license": "Apache-2.0" }
+{
+  "name": "bare-node-inspector",
+  "version": "1.0.0",
+  "description": "bare compat for inspector",
+  "homepage": "https://github.com/holepunchto/bare-node"
+  "dependencies": {
+    "bare-inspector": "*"
+  },
+  "license": "Apache-2.0"
+}
