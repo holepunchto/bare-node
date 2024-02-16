@@ -1,0 +1,1 @@
+{ "name": "bare-node-string-decoder", "version": "0.0.0", "description": "bare compat for string_decoder", "dependencies": {}, "license": "Apache-2.0" }

@@ -1,0 +1,1 @@
+{ "name": "bare-node-path", "version": "1.0.0", "description": "bare compat for path", "dependencies": {"bare-path": "*"}, "license": "Apache-2.0" }

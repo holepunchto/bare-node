@@ -1,0 +1,1 @@
+throw new Error('timers compat is not yet supported')

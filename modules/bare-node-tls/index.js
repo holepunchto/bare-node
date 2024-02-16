@@ -1,0 +1,1 @@
+throw new Error('tls compat is not yet supported')

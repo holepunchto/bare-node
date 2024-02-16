@@ -1,0 +1,1 @@
+{ "name": "bare-node-inspector", "version": "1.0.0", "description": "bare compat for inspector", "dependencies": {"bare-inspector": "*"}, "license": "Apache-2.0" }

@@ -1,0 +1,1 @@
+throw new Error('assert compat is not yet supported')

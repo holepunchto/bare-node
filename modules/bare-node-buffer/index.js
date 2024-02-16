@@ -1,0 +1,1 @@
+throw new Error('buffer compat is not yet supported')

@@ -1,0 +1,1 @@
+throw new Error('https compat is not yet supported')

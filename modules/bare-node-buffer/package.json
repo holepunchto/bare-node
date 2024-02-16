@@ -1,0 +1,1 @@
+{ "name": "bare-node-buffer", "version": "0.0.0", "description": "bare compat for buffer", "dependencies": {}, "license": "Apache-2.0" }

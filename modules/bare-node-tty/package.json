@@ -1,0 +1,1 @@
+{ "name": "bare-node-tty", "version": "1.0.0", "description": "bare compat for tty", "dependencies": {"bare-tty": "*"}, "license": "Apache-2.0" }

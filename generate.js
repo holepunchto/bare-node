@@ -46,7 +46,10 @@ for (const name of Module.builtinModules) {
   fs.mkdirSync('modules/' + compat)
   fs.writeFileSync('modules/' + compat + '/package.json', `{ "name": "${compat}", "version": "${v}", "description": "bare compat for ${name}", "dependencies": {${deps}}, "license": "Apache-2.0" }\n`)
 
-  if (bare[name]) fs.writeFileSync('modules/' + compat + '/index.js', `module.exports = require('${bare[name]}')`)
+  if (bare[name]) {
+    fs.writeFileSync('modules/' + compat + '/index.js', `module.exports = require('${bare[name]}')`)
+    if (name === 'fs') fs.writeFileSync('modules/' + compat + '/promises.js', `module.exports = require('${bare[name]}/promises')`)
+  }
   else fs.writeFileSync('modules/' + compat + '/index.js', `throw new Error('${name} compat is not yet supported')`)
 }
 

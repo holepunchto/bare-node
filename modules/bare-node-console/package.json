@@ -1,0 +1,1 @@
+{ "name": "bare-node-console", "version": "1.0.0", "description": "bare compat for console", "dependencies": {"bare-console": "*"}, "license": "Apache-2.0" }

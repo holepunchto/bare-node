@@ -1,0 +1,1 @@
+throw new Error('sys compat is not yet supported')

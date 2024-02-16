@@ -1,0 +1,1 @@
+throw new Error('async_hooks compat is not yet supported')

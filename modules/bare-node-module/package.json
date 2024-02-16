@@ -1,0 +1,1 @@
+{ "name": "bare-node-module", "version": "0.0.0", "description": "bare compat for module", "dependencies": {}, "license": "Apache-2.0" }

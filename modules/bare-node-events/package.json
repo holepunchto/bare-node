@@ -1,0 +1,1 @@
+{ "name": "bare-node-events", "version": "1.0.0", "description": "bare compat for events", "dependencies": {"bare-events": "*"}, "license": "Apache-2.0" }

@@ -1,0 +1,1 @@
+throw new Error('wasi compat is not yet supported')

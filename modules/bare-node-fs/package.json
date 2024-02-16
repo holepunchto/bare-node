@@ -1,0 +1,1 @@
+{ "name": "bare-node-fs", "version": "1.0.1", "description": "bare compat for fs", "dependencies": {"bare-fs": "*"}, "license": "Apache-2.0" }

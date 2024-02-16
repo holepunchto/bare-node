@@ -1,0 +1,1 @@
+throw new Error('crypto compat is not yet supported')

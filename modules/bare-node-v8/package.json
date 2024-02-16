@@ -1,0 +1,1 @@
+{ "name": "bare-node-v8", "version": "0.0.0", "description": "bare compat for v8", "dependencies": {}, "license": "Apache-2.0" }

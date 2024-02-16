@@ -1,0 +1,1 @@
+{ "name": "bare-node-trace-events", "version": "0.0.0", "description": "bare compat for trace_events", "dependencies": {}, "license": "Apache-2.0" }

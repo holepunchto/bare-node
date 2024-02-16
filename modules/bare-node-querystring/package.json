@@ -1,0 +1,1 @@
+{ "name": "bare-node-querystring", "version": "0.0.0", "description": "bare compat for querystring", "dependencies": {}, "license": "Apache-2.0" }

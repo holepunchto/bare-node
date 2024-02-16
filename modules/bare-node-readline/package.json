@@ -1,0 +1,1 @@
+{ "name": "bare-node-readline", "version": "1.0.0", "description": "bare compat for readline", "dependencies": {"bare-readline": "*"}, "license": "Apache-2.0" }
