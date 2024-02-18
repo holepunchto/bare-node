@@ -51,9 +51,13 @@ to package.json
 ```json
 {
   "imports": {
-    "events": {
+    "fs": {
       "bare": "bare-fs",
       "default": "fs"
+    },
+    "fs/*": {
+      "bare": "bare-fs/*",
+      "default": "fs/*"
     }
   },
   "optionalDependencies": {
