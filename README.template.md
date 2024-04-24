@@ -55,7 +55,7 @@ Node.js | Bare | Wrapper
 :--- | :--- | :---
 {{#modules}}
 {{#compatibility}}
-[`{{name}}`](https://nodejs.org/api/${{name}}.html) | [`{{compatibility}}`](https://github.com/holepunchto/{{compatibility}}) | [`npm:{{wrapper}}`](https://www.npmjs.com/package/{{wrapper}})
+[`{{name}}`](https://nodejs.org/api/{{name}}.html) | [`{{compatibility}}`](https://github.com/holepunchto/{{compatibility}}) | [`npm:{{wrapper}}`](https://www.npmjs.com/package/{{wrapper}})
 {{/compatibility}}
 {{/modules}}
 
