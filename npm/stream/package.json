@@ -1,6 +1,6 @@
 {
   "name": "bare-node-stream",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "Bare compatibility wrapper for the Node.js builtin `stream` module",
   "exports": {
     ".": "./index.js",
