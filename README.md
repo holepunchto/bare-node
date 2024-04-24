@@ -13,6 +13,7 @@ Currently supported:
 * `http`: [`bare-http1`](https://github.com/holepunchto/bare-http1) (through `npm:bare-node-http`)
 * `https`: [`bare-https`](https://github.com/holepunchto/bare-https) (through `npm:bare-node-https`)
 * `inspector`: [`bare-inspector`](https://github.com/holepunchto/bare-inspector) (through `npm:bare-node-inspector`)
+* `module`: [`bare-module`](https://github.com/holepunchto/bare-module) (through `npm:bare-node-module`)
 * `os`: [`bare-os`](https://github.com/holepunchto/bare-os) (through `npm:bare-node-os`)
 * `path`: [`bare-path`](https://github.com/holepunchto/bare-path) (through `npm:bare-node-path`)
 * `process`: [`bare-process`](https://github.com/holepunchto/bare-process) (through `npm:bare-node-process`)
@@ -96,6 +97,8 @@ To get the full Node.js compatibility layer that Bare currently supports add the
     "https": "npm:bare-node-https",
     "bare-inspector": "^1.2.1",
     "inspector": "npm:bare-node-inspector",
+    "bare-module": "^3.2.0",
+    "module": "npm:bare-node-module",
     "bare-os": "^2.3.0",
     "os": "npm:bare-node-os",
     "bare-path": "^2.1.1",

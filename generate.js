@@ -12,6 +12,7 @@ const compatibility = {
   http: 'bare-http1',
   https: 'bare-https',
   inspector: 'bare-inspector',
+  module: 'bare-module',
   os: 'bare-os',
   path: 'bare-path',
   process: 'bare-process',

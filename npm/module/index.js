@@ -1,1 +1,1 @@
-throw new Error('\'module\' compatibility is not yet supported')
+module.exports = require('bare-module')
