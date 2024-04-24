@@ -1,6 +1,7 @@
-const Module = require('module')
-const fs = require('fs')
-const path = require('path')
+import * as Module from 'module'
+import * as fs from 'fs'
+import * as path from 'path'
+import pacote from 'pacote'
 
 const compatibility = {
   assert: 'bare-assert',
@@ -52,8 +53,8 @@ for (const mod of Object.values(modules)) {
 
   let existing
   try {
-    existing = require(path.resolve(dir, 'package.json'))
-  } catch {
+    existing = await pacote.manifest(path.resolve(dir))
+  } catch (err) {
     existing = {
       version: mod.name in compatibility ? '1.0.0' : '0.0.0'
     }
@@ -90,7 +91,9 @@ for (const mod of Object.values(modules)) {
       `* \`${mod.name}\`: [\`${compat}\`](https://github.com/holepunchto/${compat}) (through \`npm:bare-node-${name}\`)`
     )
 
-    dependencies[compat] = `^${require('child_process').execSync(`npm view ${compat} version`).toString().trim()}`
+    const manifest = await pacote.manifest(compat)
+
+    dependencies[compat] = `^${manifest.version}`
 
     dependencies[mod.name] = `npm:bare-node-${name}`
 

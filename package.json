@@ -1,0 +1,19 @@
+{
+  "private": true,
+  "type": "module",
+  "name": "bare-node",
+  "description": "Compatibility modules for Node.js builtins in Bare",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/holepunchto/bare-node.git"
+  },
+  "author": "Holepunch",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/holepunchto/bare-node/issues"
+  },
+  "homepage": "https://github.com/holepunchto/bare-node#readme",
+  "dependencies": {
+    "pacote": "^18.0.2"
+  }
+}
