@@ -1,1 +1,1 @@
-throw new Error('buffer compat is not yet supported')
+module.exports = require('bare-buffer')

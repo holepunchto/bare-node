@@ -1,10 +1,10 @@
 {
   "name": "bare-node-https",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "bare compat for https",
   "homepage": "https://github.com/holepunchto/bare-node"
   "dependencies": {
-    
+    "bare-https": "*"
   },
   "license": "Apache-2.0"
 }

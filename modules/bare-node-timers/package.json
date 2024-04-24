@@ -1,10 +1,10 @@
 {
   "name": "bare-node-timers",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "bare compat for timers",
   "homepage": "https://github.com/holepunchto/bare-node"
   "dependencies": {
-    
+    "bare-timers": "*"
   },
   "license": "Apache-2.0"
 }

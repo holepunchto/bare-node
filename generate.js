@@ -2,19 +2,25 @@ const Module = require('module')
 const fs = require('fs')
 
 const bare = {
+  assert: 'bare-assert',
+  buffer: 'bare-buffer',
+  child_process: 'bare-subprocess',
+  console: 'bare-console',
+  events: 'bare-events',
   fs: 'bare-fs',
   http: 'bare-http1',
+  https: 'bare-https',
+  inspector: 'bare-inspector',
   os: 'bare-os',
   path: 'bare-path',
-  events: 'bare-events',
-  url: 'bare-url',
-  child_process: 'bare-subprocess',
+  process: 'bare-process',
   readline: 'bare-readline',
   repl: 'bare-repl',
-  inspector: 'bare-inspector',
-  process: 'bare-process',
-  console: 'bare-console',
-  tty: 'bare-tty'
+  timers: 'bare-timers',
+  tls: 'bare-tls',
+  tty: 'bare-tty',
+  url: 'bare-url',
+  worker_threads: 'bare-worker'
 }
 
 fs.rmSync('modules', { force: true, recursive: true })
@@ -36,7 +42,7 @@ for (const name of Module.builtinModules) {
   const deps = bare[name] ? `"${bare[name]}": "*"` : ''
 
   if (bare[name]) {
-    list += `* \`${name}\`: [\`${bare[name]}\`](https://github.com/holepunchto/${bare[name]}) (through \`npm:${compat})\`\n`
+    list += `* \`${name}\`: [\`${bare[name]}\`](https://github.com/holepunchto/${bare[name]}) (through \`npm:${compat}\`)\`\n`
     all += `    "${bare[name]}": "^${require('child_process').execSync('npm view ' + bare[name] + ' version').toString().trim()}",\n`
     all += `    "${name}": "npm:${compat}",\n`
   }
@@ -51,8 +57,7 @@ for (const name of Module.builtinModules) {
   if (bare[name]) {
     fs.writeFileSync('modules/' + compat + '/index.js', `module.exports = require('${bare[name]}')`)
     if (name === 'fs') fs.writeFileSync('modules/' + compat + '/promises.js', `module.exports = require('${bare[name]}/promises')`)
-  }
-  else fs.writeFileSync('modules/' + compat + '/index.js', `throw new Error('${name} compat is not yet supported')`)
+  } else fs.writeFileSync('modules/' + compat + '/index.js', `throw new Error('${name} compat is not yet supported')`)
 }
 
 all = all.trim().replace(/,$/g, '') + '\n  }\n}'

@@ -1,1 +1,1 @@
-throw new Error('timers compat is not yet supported')
+module.exports = require('bare-timers')

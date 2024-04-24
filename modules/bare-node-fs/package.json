@@ -1,6 +1,6 @@
 {
   "name": "bare-node-fs",
-  "version": "1.0.1",
+  "version": "1.0.0",
   "description": "bare compat for fs",
   "homepage": "https://github.com/holepunchto/bare-node"
   "dependencies": {

@@ -1,1 +1,1 @@
-throw new Error('worker_threads compat is not yet supported')
+module.exports = require('bare-worker')
