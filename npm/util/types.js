@@ -1,1 +1,1 @@
-module.exports = require('undefined/types')
+throw new Error('\'util/types\' compatibility is not yet supported')

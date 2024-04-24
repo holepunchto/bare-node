@@ -80,7 +80,7 @@ for (const mod of Object.values(modules)) {
     homepage: 'https://github.com/holepunchto/bare-node#readme'
   }
 
-  let index
+  let code
 
   if (mod.name in compatibility) {
     const compat = compatibility[mod.name]
@@ -97,19 +97,27 @@ for (const mod of Object.values(modules)) {
       [compatibility[mod.name]]: '*'
     }
 
-    index = `module.exports = require('${compatibility[mod.name]}')\n`
+    code = `module.exports = require('${compatibility[mod.name]}')\n`
   } else {
-    index = `throw new Error('\\'${mod.name}\\' compatibility is not yet supported')\n`
+    code = `throw new Error('\\'${mod.name}\\' compatibility is not yet supported')\n`
   }
 
-  fs.writeFileSync(path.join(dir, 'index.js'), index)
+  fs.writeFileSync(path.join(dir, 'index.js'), code)
 
   for (const subpath of mod.subpaths) {
     pkg.exports[`./${subpath}`] = `./${subpath}.js`
 
     pkg.files.push(`${subpath}.js`)
 
-    fs.writeFileSync(path.join(dir, `${subpath}.js`), `module.exports = require('${compatibility[mod.name]}/${subpath}')\n`)
+    let code
+
+    if (mod.name in compatibility) {
+      code = `module.exports = require('${compatibility[mod.name]}/${subpath}')\n`
+    } else {
+      code = `throw new Error('\\'${mod.name}/${subpath}\\' compatibility is not yet supported')\n`
+    }
+
+    fs.writeFileSync(path.join(dir, `${subpath}.js`), code)
   }
 
   fs.writeFileSync(path.join(dir, 'package.json'), `${JSON.stringify(pkg, null, 2)}\n`)

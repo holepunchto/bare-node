@@ -1,1 +1,1 @@
-module.exports = require('undefined/web')
+throw new Error('\'stream/web\' compatibility is not yet supported')

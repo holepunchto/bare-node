@@ -1,1 +1,1 @@
-module.exports = require('undefined/promises')
+throw new Error('\'stream/promises\' compatibility is not yet supported')
