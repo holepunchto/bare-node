@@ -44,8 +44,6 @@ for (const builtin of [...Module.builtinModules].sort()) {
   if (subpath) mod.subpaths.push(subpath)
 }
 
-const dependencies = {}
-
 for (const mod of Object.values(modules)) {
   const dir = path.join('npm', mod.wrapper.replace('bare-node-', ''))
 
@@ -85,15 +83,7 @@ for (const mod of Object.values(modules)) {
   let code
 
   if (mod.compatibility) {
-    const manifest = await pacote.manifest(mod.compatibility)
-
-    dependencies[mod.compatibility] = `^${manifest.version}`
-
-    dependencies[mod.name] = `npm:${mod.wrapper}`
-
-    pkg.dependencies = {
-      [compatibility[mod.name]]: '*'
-    }
+    pkg.dependencies = { [mod.compatibility]: '*' }
 
     code = `module.exports = require('${compatibility[mod.name]}')\n`
   } else {
