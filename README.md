@@ -51,26 +51,28 @@ Say goodbye to broken apps and modules due to Node.js core changes.
 
 ## Modules
 
-* `assert`: [`bare-assert`](https://github.com/holepunchto/bare-assert) (through [`npm:bare-node-assert`](https://www.npmjs.com/package/bare-node-assert))
-* `buffer`: [`bare-buffer`](https://github.com/holepunchto/bare-buffer) (through [`npm:bare-node-buffer`](https://www.npmjs.com/package/bare-node-buffer))
-* `child_process`: [`bare-subprocess`](https://github.com/holepunchto/bare-subprocess) (through [`npm:bare-node-child-process`](https://www.npmjs.com/package/bare-node-child-process))
-* `console`: [`bare-console`](https://github.com/holepunchto/bare-console) (through [`npm:bare-node-console`](https://www.npmjs.com/package/bare-node-console))
-* `events`: [`bare-events`](https://github.com/holepunchto/bare-events) (through [`npm:bare-node-events`](https://www.npmjs.com/package/bare-node-events))
-* `fs`: [`bare-fs`](https://github.com/holepunchto/bare-fs) (through [`npm:bare-node-fs`](https://www.npmjs.com/package/bare-node-fs))
-* `http`: [`bare-http1`](https://github.com/holepunchto/bare-http1) (through [`npm:bare-node-http`](https://www.npmjs.com/package/bare-node-http))
-* `https`: [`bare-https`](https://github.com/holepunchto/bare-https) (through [`npm:bare-node-https`](https://www.npmjs.com/package/bare-node-https))
-* `inspector`: [`bare-inspector`](https://github.com/holepunchto/bare-inspector) (through [`npm:bare-node-inspector`](https://www.npmjs.com/package/bare-node-inspector))
-* `module`: [`bare-module`](https://github.com/holepunchto/bare-module) (through [`npm:bare-node-module`](https://www.npmjs.com/package/bare-node-module))
-* `os`: [`bare-os`](https://github.com/holepunchto/bare-os) (through [`npm:bare-node-os`](https://www.npmjs.com/package/bare-node-os))
-* `path`: [`bare-path`](https://github.com/holepunchto/bare-path) (through [`npm:bare-node-path`](https://www.npmjs.com/package/bare-node-path))
-* `process`: [`bare-process`](https://github.com/holepunchto/bare-process) (through [`npm:bare-node-process`](https://www.npmjs.com/package/bare-node-process))
-* `readline`: [`bare-readline`](https://github.com/holepunchto/bare-readline) (through [`npm:bare-node-readline`](https://www.npmjs.com/package/bare-node-readline))
-* `repl`: [`bare-repl`](https://github.com/holepunchto/bare-repl) (through [`npm:bare-node-repl`](https://www.npmjs.com/package/bare-node-repl))
-* `timers`: [`bare-timers`](https://github.com/holepunchto/bare-timers) (through [`npm:bare-node-timers`](https://www.npmjs.com/package/bare-node-timers))
-* `tls`: [`bare-tls`](https://github.com/holepunchto/bare-tls) (through [`npm:bare-node-tls`](https://www.npmjs.com/package/bare-node-tls))
-* `tty`: [`bare-tty`](https://github.com/holepunchto/bare-tty) (through [`npm:bare-node-tty`](https://www.npmjs.com/package/bare-node-tty))
-* `url`: [`bare-url`](https://github.com/holepunchto/bare-url) (through [`npm:bare-node-url`](https://www.npmjs.com/package/bare-node-url))
-* `worker_threads`: [`bare-worker`](https://github.com/holepunchto/bare-worker) (through [`npm:bare-node-worker-threads`](https://www.npmjs.com/package/bare-node-worker-threads))
+Node.js | Bare | Wrapper
+:--- | :--- | :---
+[`assert`](https://nodejs.org/api/$assert.html) | [`bare-assert`](https://github.com/holepunchto/bare-assert) | [`npm:bare-node-assert`](https://www.npmjs.com/package/bare-node-assert)
+[`buffer`](https://nodejs.org/api/$buffer.html) | [`bare-buffer`](https://github.com/holepunchto/bare-buffer) | [`npm:bare-node-buffer`](https://www.npmjs.com/package/bare-node-buffer)
+[`child_process`](https://nodejs.org/api/$child_process.html) | [`bare-subprocess`](https://github.com/holepunchto/bare-subprocess) | [`npm:bare-node-child-process`](https://www.npmjs.com/package/bare-node-child-process)
+[`console`](https://nodejs.org/api/$console.html) | [`bare-console`](https://github.com/holepunchto/bare-console) | [`npm:bare-node-console`](https://www.npmjs.com/package/bare-node-console)
+[`events`](https://nodejs.org/api/$events.html) | [`bare-events`](https://github.com/holepunchto/bare-events) | [`npm:bare-node-events`](https://www.npmjs.com/package/bare-node-events)
+[`fs`](https://nodejs.org/api/$fs.html) | [`bare-fs`](https://github.com/holepunchto/bare-fs) | [`npm:bare-node-fs`](https://www.npmjs.com/package/bare-node-fs)
+[`http`](https://nodejs.org/api/$http.html) | [`bare-http1`](https://github.com/holepunchto/bare-http1) | [`npm:bare-node-http`](https://www.npmjs.com/package/bare-node-http)
+[`https`](https://nodejs.org/api/$https.html) | [`bare-https`](https://github.com/holepunchto/bare-https) | [`npm:bare-node-https`](https://www.npmjs.com/package/bare-node-https)
+[`inspector`](https://nodejs.org/api/$inspector.html) | [`bare-inspector`](https://github.com/holepunchto/bare-inspector) | [`npm:bare-node-inspector`](https://www.npmjs.com/package/bare-node-inspector)
+[`module`](https://nodejs.org/api/$module.html) | [`bare-module`](https://github.com/holepunchto/bare-module) | [`npm:bare-node-module`](https://www.npmjs.com/package/bare-node-module)
+[`os`](https://nodejs.org/api/$os.html) | [`bare-os`](https://github.com/holepunchto/bare-os) | [`npm:bare-node-os`](https://www.npmjs.com/package/bare-node-os)
+[`path`](https://nodejs.org/api/$path.html) | [`bare-path`](https://github.com/holepunchto/bare-path) | [`npm:bare-node-path`](https://www.npmjs.com/package/bare-node-path)
+[`process`](https://nodejs.org/api/$process.html) | [`bare-process`](https://github.com/holepunchto/bare-process) | [`npm:bare-node-process`](https://www.npmjs.com/package/bare-node-process)
+[`readline`](https://nodejs.org/api/$readline.html) | [`bare-readline`](https://github.com/holepunchto/bare-readline) | [`npm:bare-node-readline`](https://www.npmjs.com/package/bare-node-readline)
+[`repl`](https://nodejs.org/api/$repl.html) | [`bare-repl`](https://github.com/holepunchto/bare-repl) | [`npm:bare-node-repl`](https://www.npmjs.com/package/bare-node-repl)
+[`timers`](https://nodejs.org/api/$timers.html) | [`bare-timers`](https://github.com/holepunchto/bare-timers) | [`npm:bare-node-timers`](https://www.npmjs.com/package/bare-node-timers)
+[`tls`](https://nodejs.org/api/$tls.html) | [`bare-tls`](https://github.com/holepunchto/bare-tls) | [`npm:bare-node-tls`](https://www.npmjs.com/package/bare-node-tls)
+[`tty`](https://nodejs.org/api/$tty.html) | [`bare-tty`](https://github.com/holepunchto/bare-tty) | [`npm:bare-node-tty`](https://www.npmjs.com/package/bare-node-tty)
+[`url`](https://nodejs.org/api/$url.html) | [`bare-url`](https://github.com/holepunchto/bare-url) | [`npm:bare-node-url`](https://www.npmjs.com/package/bare-node-url)
+[`worker_threads`](https://nodejs.org/api/$worker_threads.html) | [`bare-worker`](https://github.com/holepunchto/bare-worker) | [`npm:bare-node-worker-threads`](https://www.npmjs.com/package/bare-node-worker-threads)
 
 ## License
 
