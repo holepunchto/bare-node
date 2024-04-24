@@ -60,3 +60,7 @@ To get the full Node.js compatibility layer that Bare currently supports add the
 ```json
 {{all}}
 ```
+
+## License
+
+Apache-2.0

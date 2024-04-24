@@ -1,1 +1,0 @@
-throw new Error('v8 compat is not yet supported')

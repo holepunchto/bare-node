@@ -1,1 +1,0 @@
-throw new Error('constants compat is not yet supported')

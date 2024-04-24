@@ -1,7 +1,8 @@
 const Module = require('module')
 const fs = require('fs')
+const path = require('path')
 
-const bare = {
+const compatibility = {
   assert: 'bare-assert',
   buffer: 'bare-buffer',
   child_process: 'bare-subprocess',
@@ -23,53 +24,102 @@ const bare = {
   worker_threads: 'bare-worker'
 }
 
-fs.rmSync('modules', { force: true, recursive: true })
-fs.mkdirSync('modules')
+const modules = {}
 
-const publish = []
+for (const builtin of [...Module.builtinModules].sort()) {
+  if (builtin.startsWith('_')) continue
 
-let list = ''
-let all = '{\n'
+  const [name, subpath = null] = builtin.split('/')
 
-all += '  "dependencies": {\n'
+  const mod = modules[name] || (modules[name] = {
+    name,
+    subpaths: []
+  })
 
-for (const name of Module.builtinModules) {
-  if (name[0] === '_') continue
-  if (name.indexOf('/') > -1) continue
-
-  const v = bare[name] ? '1.0.0' : '0.0.0'
-  const compat = 'bare-node-' + name.replace(/_/g, '-')
-  const deps = bare[name] ? `"${bare[name]}": "*"` : ''
-
-  if (bare[name]) {
-    list += `* \`${name}\`: [\`${bare[name]}\`](https://github.com/holepunchto/${bare[name]}) (through \`npm:${compat}\`)\`\n`
-    all += `    "${bare[name]}": "^${require('child_process').execSync('npm view ' + bare[name] + ' version').toString().trim()}",\n`
-    all += `    "${name}": "npm:${compat}",\n`
-  }
-
-  publish.push(compat)
-
-  fs.mkdirSync('modules/' + compat)
-  if (!fs.existsSync('modules/' + compat + '/package.json')) {
-    fs.writeFileSync('modules/' + compat + '/package.json', `{\n  "name": "${compat}",\n  "version": "${v}",\n  "description": "bare compat for ${name}",\n  "homepage": "https://github.com/holepunchto/bare-node"\n  "dependencies": {\n    ${deps}\n  },\n  "license": "Apache-2.0"\n}\n`)
-  }
-
-  if (bare[name]) {
-    fs.writeFileSync('modules/' + compat + '/index.js', `module.exports = require('${bare[name]}')`)
-    if (name === 'fs') fs.writeFileSync('modules/' + compat + '/promises.js', `module.exports = require('${bare[name]}/promises')`)
-  } else fs.writeFileSync('modules/' + compat + '/index.js', `throw new Error('${name} compat is not yet supported')`)
+  if (subpath) mod.subpaths.push(subpath)
 }
 
-all = all.trim().replace(/,$/g, '') + '\n  }\n}'
+const list = []
+const dependencies = {}
 
-if (process.argv.includes('--publish')) {
-  for (const name of publish) {
-    try {
-      require('child_process').spawnSync('npm', ['publish'], { cwd: 'modules/' + name, stdio: 'inherit' })
-    } catch {
-      // ignore
+for (const mod of Object.values(modules)) {
+  const name = mod.name.replace(/_/g, '-')
+
+  const dir = path.join('npm', name)
+
+  fs.mkdirSync(dir, { force: true, recursive: true })
+
+  let existing
+  try {
+    existing = require(path.resolve(dir, 'package.json'))
+  } catch {
+    existing = {
+      version: mod.name in compatibility ? '1.0.0' : '0.0.0'
     }
   }
+
+  const pkg = {
+    name: `bare-node-${name}`,
+    version: existing.version,
+    description: `Bare compatibility wrapper for the Node.js builtin \`${mod.name}\` module`,
+    exports: {
+      '.': './index.js'
+    },
+    files: [
+      'index.js'
+    ],
+    repository: {
+      type: 'git',
+      url: 'git+https://github.com/holepunchto/bare-node.git'
+    },
+    author: 'Holepunch',
+    license: 'Apache-2.0',
+    bugs: {
+      url: 'https://github.com/holepunchto/bare-node/issues'
+    },
+    homepage: 'https://github.com/holepunchto/bare-node#readme'
+  }
+
+  let index
+
+  if (mod.name in compatibility) {
+    const compat = compatibility[mod.name]
+
+    list.push(
+      `* \`${mod.name}\`: [\`${compat}\`](https://github.com/holepunchto/${compat}) (through \`npm:bare-node-${name}\`)`
+    )
+
+    dependencies[compat] = `^${require('child_process').execSync(`npm view ${compat} version`).toString().trim()}`
+
+    dependencies[mod.name] = `npm:bare-node-${name}`
+
+    pkg.dependencies = {
+      [compatibility[mod.name]]: '*'
+    }
+
+    index = `module.exports = require('${compatibility[mod.name]}')\n`
+  } else {
+    index = `throw new Error('\\'${mod.name}\\' compatibility is not yet supported')\n`
+  }
+
+  fs.writeFileSync(path.join(dir, 'index.js'), index)
+
+  for (const subpath of mod.subpaths) {
+    pkg.exports[`./${subpath}`] = `./${subpath}.js`
+
+    pkg.files.push(`${subpath}.js`)
+
+    fs.writeFileSync(path.join(dir, `${subpath}.js`), `module.exports = require('${compatibility[mod.name]}/${subpath}')\n`)
+  }
+
+  fs.writeFileSync(path.join(dir, 'package.json'), `${JSON.stringify(pkg, null, 2)}\n`)
+
+  for (const file of ['LICENSE', 'NOTICE']) {
+    fs.copyFileSync(file, path.join(dir, file))
+  }
 }
 
-fs.writeFileSync('README.md', fs.readFileSync('README.template.md', 'utf-8').replace('{{list}}', list.trim()).replace('{{all}}', all.trim()))
+fs.writeFileSync('README.md', fs.readFileSync('README.template.md', 'utf-8')
+  .replace('{{list}}', list.join('\n'))
+  .replace('{{all}}', JSON.stringify({ dependencies }, null, 2))
+)

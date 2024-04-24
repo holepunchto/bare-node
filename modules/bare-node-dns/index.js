@@ -1,1 +1,0 @@
-throw new Error('dns compat is not yet supported')

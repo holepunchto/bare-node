@@ -1,1 +1,0 @@
-throw new Error('vm compat is not yet supported')

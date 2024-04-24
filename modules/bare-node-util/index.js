@@ -1,1 +1,0 @@
-throw new Error('util compat is not yet supported')

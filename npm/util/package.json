@@ -1,0 +1,23 @@
+{
+  "name": "bare-node-util",
+  "version": "0.0.0",
+  "description": "Bare compatibility wrapper for the Node.js builtin `util` module",
+  "exports": {
+    ".": "./index.js",
+    "./types": "./types.js"
+  },
+  "files": [
+    "index.js",
+    "types.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/holepunchto/bare-node.git"
+  },
+  "author": "Holepunch",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/holepunchto/bare-node/issues"
+  },
+  "homepage": "https://github.com/holepunchto/bare-node#readme"
+}

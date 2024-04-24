@@ -1,1 +1,0 @@
-throw new Error('http2 compat is not yet supported')

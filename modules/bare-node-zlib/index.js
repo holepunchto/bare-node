@@ -1,1 +1,0 @@
-throw new Error('zlib compat is not yet supported')

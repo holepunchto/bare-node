@@ -1,1 +1,0 @@
-throw new Error('dgram compat is not yet supported')

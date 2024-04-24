@@ -1,1 +1,0 @@
-throw new Error('querystring compat is not yet supported')

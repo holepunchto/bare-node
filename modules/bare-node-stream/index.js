@@ -1,1 +1,0 @@
-throw new Error('stream compat is not yet supported')

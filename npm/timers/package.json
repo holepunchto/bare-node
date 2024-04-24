@@ -1,0 +1,26 @@
+{
+  "name": "bare-node-timers",
+  "version": "1.0.0",
+  "description": "Bare compatibility wrapper for the Node.js builtin `timers` module",
+  "exports": {
+    ".": "./index.js",
+    "./promises": "./promises.js"
+  },
+  "files": [
+    "index.js",
+    "promises.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/holepunchto/bare-node.git"
+  },
+  "author": "Holepunch",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/holepunchto/bare-node/issues"
+  },
+  "homepage": "https://github.com/holepunchto/bare-node#readme",
+  "dependencies": {
+    "bare-timers": "*"
+  }
+}

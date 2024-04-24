@@ -4,25 +4,25 @@ Compatibility modules for Bare that try to behave like their Node.js counterpart
 
 Currently supported:
 
-* `assert`: [`bare-assert`](https://github.com/holepunchto/bare-assert) (through `npm:bare-node-assert`)`
-* `buffer`: [`bare-buffer`](https://github.com/holepunchto/bare-buffer) (through `npm:bare-node-buffer`)`
-* `child_process`: [`bare-subprocess`](https://github.com/holepunchto/bare-subprocess) (through `npm:bare-node-child-process`)`
-* `console`: [`bare-console`](https://github.com/holepunchto/bare-console) (through `npm:bare-node-console`)`
-* `events`: [`bare-events`](https://github.com/holepunchto/bare-events) (through `npm:bare-node-events`)`
-* `fs`: [`bare-fs`](https://github.com/holepunchto/bare-fs) (through `npm:bare-node-fs`)`
-* `http`: [`bare-http1`](https://github.com/holepunchto/bare-http1) (through `npm:bare-node-http`)`
-* `https`: [`bare-https`](https://github.com/holepunchto/bare-https) (through `npm:bare-node-https`)`
-* `inspector`: [`bare-inspector`](https://github.com/holepunchto/bare-inspector) (through `npm:bare-node-inspector`)`
-* `os`: [`bare-os`](https://github.com/holepunchto/bare-os) (through `npm:bare-node-os`)`
-* `path`: [`bare-path`](https://github.com/holepunchto/bare-path) (through `npm:bare-node-path`)`
-* `process`: [`bare-process`](https://github.com/holepunchto/bare-process) (through `npm:bare-node-process`)`
-* `readline`: [`bare-readline`](https://github.com/holepunchto/bare-readline) (through `npm:bare-node-readline`)`
-* `repl`: [`bare-repl`](https://github.com/holepunchto/bare-repl) (through `npm:bare-node-repl`)`
-* `timers`: [`bare-timers`](https://github.com/holepunchto/bare-timers) (through `npm:bare-node-timers`)`
-* `tls`: [`bare-tls`](https://github.com/holepunchto/bare-tls) (through `npm:bare-node-tls`)`
-* `tty`: [`bare-tty`](https://github.com/holepunchto/bare-tty) (through `npm:bare-node-tty`)`
-* `url`: [`bare-url`](https://github.com/holepunchto/bare-url) (through `npm:bare-node-url`)`
-* `worker_threads`: [`bare-worker`](https://github.com/holepunchto/bare-worker) (through `npm:bare-node-worker-threads`)`
+* `assert`: [`bare-assert`](https://github.com/holepunchto/bare-assert) (through `npm:bare-node-assert`)
+* `buffer`: [`bare-buffer`](https://github.com/holepunchto/bare-buffer) (through `npm:bare-node-buffer`)
+* `child_process`: [`bare-subprocess`](https://github.com/holepunchto/bare-subprocess) (through `npm:bare-node-child-process`)
+* `console`: [`bare-console`](https://github.com/holepunchto/bare-console) (through `npm:bare-node-console`)
+* `events`: [`bare-events`](https://github.com/holepunchto/bare-events) (through `npm:bare-node-events`)
+* `fs`: [`bare-fs`](https://github.com/holepunchto/bare-fs) (through `npm:bare-node-fs`)
+* `http`: [`bare-http1`](https://github.com/holepunchto/bare-http1) (through `npm:bare-node-http`)
+* `https`: [`bare-https`](https://github.com/holepunchto/bare-https) (through `npm:bare-node-https`)
+* `inspector`: [`bare-inspector`](https://github.com/holepunchto/bare-inspector) (through `npm:bare-node-inspector`)
+* `os`: [`bare-os`](https://github.com/holepunchto/bare-os) (through `npm:bare-node-os`)
+* `path`: [`bare-path`](https://github.com/holepunchto/bare-path) (through `npm:bare-node-path`)
+* `process`: [`bare-process`](https://github.com/holepunchto/bare-process) (through `npm:bare-node-process`)
+* `readline`: [`bare-readline`](https://github.com/holepunchto/bare-readline) (through `npm:bare-node-readline`)
+* `repl`: [`bare-repl`](https://github.com/holepunchto/bare-repl) (through `npm:bare-node-repl`)
+* `timers`: [`bare-timers`](https://github.com/holepunchto/bare-timers) (through `npm:bare-node-timers`)
+* `tls`: [`bare-tls`](https://github.com/holepunchto/bare-tls) (through `npm:bare-node-tls`)
+* `tty`: [`bare-tty`](https://github.com/holepunchto/bare-tty) (through `npm:bare-node-tty`)
+* `url`: [`bare-url`](https://github.com/holepunchto/bare-url) (through `npm:bare-node-url`)
+* `worker_threads`: [`bare-worker`](https://github.com/holepunchto/bare-worker) (through `npm:bare-node-worker-threads`)
 
 ## Example
 
@@ -119,3 +119,7 @@ To get the full Node.js compatibility layer that Bare currently supports add the
   }
 }
 ```
+
+## License
+
+Apache-2.0

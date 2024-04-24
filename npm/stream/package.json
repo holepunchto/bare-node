@@ -1,0 +1,27 @@
+{
+  "name": "bare-node-stream",
+  "version": "0.0.0",
+  "description": "Bare compatibility wrapper for the Node.js builtin `stream` module",
+  "exports": {
+    ".": "./index.js",
+    "./consumers": "./consumers.js",
+    "./promises": "./promises.js",
+    "./web": "./web.js"
+  },
+  "files": [
+    "index.js",
+    "consumers.js",
+    "promises.js",
+    "web.js"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/holepunchto/bare-node.git"
+  },
+  "author": "Holepunch",
+  "license": "Apache-2.0",
+  "bugs": {
+    "url": "https://github.com/holepunchto/bare-node/issues"
+  },
+  "homepage": "https://github.com/holepunchto/bare-node#readme"
+}

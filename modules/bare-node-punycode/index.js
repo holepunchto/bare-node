@@ -1,1 +1,0 @@
-throw new Error('punycode compat is not yet supported')
