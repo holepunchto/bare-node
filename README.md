@@ -25,7 +25,7 @@ The only thing the wrapper does is `module.exports = require('bare-fs')` and at 
 
 ### Import maps
 
-When writing a module that uses a Node.js builtin, such as `fs`, you can also choose to specify directly in that module what the builtin should map to instead of relying on the compatibility layer. You would do that using an import map by adding the following to your `package.json`:
+When writing a module that uses a Node.js builtin, such as `fs`, you can also choose to specify directly in that module what builtin should map to instead of relying on the compatibility layer. You would do that using an import map by adding the following to your `package.json`:
 
 ```json
 {
@@ -45,7 +45,7 @@ When writing a module that uses a Node.js builtin, such as `fs`, you can also ch
 }
 ```
 
-This way your module is in full control of exactly which version of the builtin it wants to bind to in Bare. If you can, this is the best option as it provides the best of all worlds; Node.js compatible, but with full control of your dependencies.
+This way your module is in full control of exactly which version of the builtin it wants to bind to in Bare. If you can, this is the best option as it provides the best of all worlds; Node.js compatible, but full control of your dependencies.
 
 Say goodbye to broken apps and modules due to Node.js core changes.
 

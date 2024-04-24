@@ -123,6 +123,21 @@ for (const mod of Object.values(modules)) {
   for (const file of ['LICENSE', 'NOTICE']) {
     fs.copyFileSync(file, path.join(dir, file))
   }
+
+  fs.writeFileSync(path.join(dir, 'README.md'), `\
+# ${mod.wrapper}
+
+Bare compatibility wrapper for the Node.js builtin \`${mod.name}\` module.
+
+\`\`\`
+npm i ${mod.compatibility ? `${mod.compatibility} ${mod.name}@npm:${mod.wrapper}` : `${mod.name}@npm:${mod.wrapper}`}
+\`\`\`
+
+## License
+
+Apache-2.0
+`
+  )
 }
 
 fs.writeFileSync('README.md', mustache.render(fs.readFileSync('README.template.md', 'utf8'), {
