@@ -53,13 +53,13 @@ For example [Localdrive](https://github.com/holepunchto/localdrive) uses `fs` an
 {
   "imports": {
     "fs": {
-       "bare": "bare-fs",
-       "default": "fs"
-     },
-     "fs/*": {
-       "bare": "bare-fs/*",
-       "default": "fs/*"
-     }
+      "bare": "bare-fs",
+      "default": "fs"
+    },
+    "fs/*": {
+      "bare": "bare-fs/*",
+      "default": "fs/*"
+    }
   },
   "optionalDependencies": {
     "bare-fs": "^2.1.5"
