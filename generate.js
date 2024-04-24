@@ -2,6 +2,7 @@ import * as Module from 'module'
 import * as fs from 'fs'
 import * as path from 'path'
 import pacote from 'pacote'
+import mustache from 'mustache'
 
 const compatibility = {
   assert: 'bare-assert',
@@ -35,19 +36,18 @@ for (const builtin of [...Module.builtinModules].sort()) {
 
   const mod = modules[name] || (modules[name] = {
     name,
-    subpaths: []
+    subpaths: [],
+    wrapper: `bare-node-${name.replace(/_/g, '-')}`,
+    compatibility: name in compatibility ? compatibility[name] : null
   })
 
   if (subpath) mod.subpaths.push(subpath)
 }
 
-const list = []
 const dependencies = {}
 
 for (const mod of Object.values(modules)) {
-  const name = mod.name.replace(/_/g, '-')
-
-  const dir = path.join('npm', name)
+  const dir = path.join('npm', mod.wrapper.replace('bare-node-', ''))
 
   fs.mkdirSync(dir, { force: true, recursive: true })
 
@@ -56,12 +56,12 @@ for (const mod of Object.values(modules)) {
     existing = await pacote.manifest(path.resolve(dir))
   } catch (err) {
     existing = {
-      version: mod.name in compatibility ? '1.0.0' : '0.0.0'
+      version: mod.compatibility ? '1.0.0' : '0.0.0'
     }
   }
 
   const pkg = {
-    name: `bare-node-${name}`,
+    name: mod.wrapper,
     version: existing.version,
     description: `Bare compatibility wrapper for the Node.js builtin \`${mod.name}\` module`,
     exports: {
@@ -84,18 +84,12 @@ for (const mod of Object.values(modules)) {
 
   let code
 
-  if (mod.name in compatibility) {
-    const compat = compatibility[mod.name]
+  if (mod.compatibility) {
+    const manifest = await pacote.manifest(mod.compatibility)
 
-    list.push(
-      `* \`${mod.name}\`: [\`${compat}\`](https://github.com/holepunchto/${compat}) (through \`npm:bare-node-${name}\`)`
-    )
+    dependencies[mod.compatibility] = `^${manifest.version}`
 
-    const manifest = await pacote.manifest(compat)
-
-    dependencies[compat] = `^${manifest.version}`
-
-    dependencies[mod.name] = `npm:bare-node-${name}`
+    dependencies[mod.name] = `npm:${mod.wrapper}`
 
     pkg.dependencies = {
       [compatibility[mod.name]]: '*'
@@ -115,8 +109,8 @@ for (const mod of Object.values(modules)) {
 
     let code
 
-    if (mod.name in compatibility) {
-      code = `module.exports = require('${compatibility[mod.name]}/${subpath}')\n`
+    if (mod.compatibility) {
+      code = `module.exports = require('${mod.compatibility}/${subpath}')\n`
     } else {
       code = `throw new Error('\\'${mod.name}/${subpath}\\' compatibility is not yet supported')\n`
     }
@@ -131,7 +125,6 @@ for (const mod of Object.values(modules)) {
   }
 }
 
-fs.writeFileSync('README.md', fs.readFileSync('README.template.md', 'utf-8')
-  .replace('{{list}}', list.join('\n'))
-  .replace('{{all}}', JSON.stringify({ dependencies }, null, 2))
-)
+fs.writeFileSync('README.md', mustache.render(fs.readFileSync('README.template.md', 'utf8'), {
+  modules: Object.values(modules)
+}))
