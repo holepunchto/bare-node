@@ -1,1 +1,1 @@
-throw new Error('\'stream/web\' compatibility is not yet supported')
+module.exports = require('bare-stream/web')

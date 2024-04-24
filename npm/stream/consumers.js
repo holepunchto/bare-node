@@ -1,1 +1,1 @@
-throw new Error('\'stream/consumers\' compatibility is not yet supported')
+module.exports = require('bare-stream/consumers')

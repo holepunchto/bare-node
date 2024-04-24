@@ -68,6 +68,7 @@ Node.js | Bare | Wrapper
 [`process`](https://nodejs.org/api/process.html) | [`bare-process`](https://github.com/holepunchto/bare-process) | [`npm:bare-node-process`](https://www.npmjs.com/package/bare-node-process)
 [`readline`](https://nodejs.org/api/readline.html) | [`bare-readline`](https://github.com/holepunchto/bare-readline) | [`npm:bare-node-readline`](https://www.npmjs.com/package/bare-node-readline)
 [`repl`](https://nodejs.org/api/repl.html) | [`bare-repl`](https://github.com/holepunchto/bare-repl) | [`npm:bare-node-repl`](https://www.npmjs.com/package/bare-node-repl)
+[`stream`](https://nodejs.org/api/stream.html) | [`bare-stream`](https://github.com/holepunchto/bare-stream) | [`npm:bare-node-stream`](https://www.npmjs.com/package/bare-node-stream)
 [`timers`](https://nodejs.org/api/timers.html) | [`bare-timers`](https://github.com/holepunchto/bare-timers) | [`npm:bare-node-timers`](https://www.npmjs.com/package/bare-node-timers)
 [`tls`](https://nodejs.org/api/tls.html) | [`bare-tls`](https://github.com/holepunchto/bare-tls) | [`npm:bare-node-tls`](https://www.npmjs.com/package/bare-node-tls)
 [`tty`](https://nodejs.org/api/tty.html) | [`bare-tty`](https://github.com/holepunchto/bare-tty) | [`npm:bare-node-tty`](https://www.npmjs.com/package/bare-node-tty)

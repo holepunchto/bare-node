@@ -1,1 +1,1 @@
-throw new Error('\'stream/promises\' compatibility is not yet supported')
+module.exports = require('bare-stream/promises')

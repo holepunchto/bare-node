@@ -20,6 +20,7 @@ const compatibility = {
   process: 'bare-process',
   readline: 'bare-readline',
   repl: 'bare-repl',
+  stream: 'bare-stream',
   timers: 'bare-timers',
   tls: 'bare-tls',
   tty: 'bare-tty',
