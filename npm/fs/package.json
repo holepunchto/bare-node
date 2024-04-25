@@ -1,6 +1,6 @@
 {
   "name": "bare-node-fs",
-  "version": "1.0.0",
+  "version": "1.0.2",
   "description": "Bare compatibility wrapper for the Node.js builtin `fs` module",
   "exports": {
     ".": "./index.js",

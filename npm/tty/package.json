@@ -1,6 +1,6 @@
 {
   "name": "bare-node-tty",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Bare compatibility wrapper for the Node.js builtin `tty` module",
   "exports": {
     ".": "./index.js"

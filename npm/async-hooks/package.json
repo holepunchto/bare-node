@@ -1,6 +1,6 @@
 {
   "name": "bare-node-async-hooks",
-  "version": "0.0.0",
+  "version": "0.0.1",
   "description": "Bare compatibility wrapper for the Node.js builtin `async_hooks` module",
   "exports": {
     ".": "./index.js"

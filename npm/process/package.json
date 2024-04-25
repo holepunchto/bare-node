@@ -1,6 +1,6 @@
 {
   "name": "bare-node-process",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "Bare compatibility wrapper for the Node.js builtin `process` module",
   "exports": {
     ".": "./index.js"
