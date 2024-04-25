@@ -1,1 +1,1 @@
-throw new Error('\'util\' compatibility is not yet supported')
+module.exports = require('bare-utils')

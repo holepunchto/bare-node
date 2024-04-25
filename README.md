@@ -89,7 +89,7 @@ Node.js | Bare | Wrapper
 [`trace_events`](https://nodejs.org/api/trace_events.html) | None | [`npm:bare-node-trace-events`](https://www.npmjs.com/package/bare-node-trace-events)
 [`tty`](https://nodejs.org/api/tty.html) | [`bare-tty`](https://github.com/holepunchto/bare-tty) | [`npm:bare-node-tty`](https://www.npmjs.com/package/bare-node-tty)
 [`url`](https://nodejs.org/api/url.html) | [`bare-url`](https://github.com/holepunchto/bare-url) | [`npm:bare-node-url`](https://www.npmjs.com/package/bare-node-url)
-[`util`](https://nodejs.org/api/util.html) | None | [`npm:bare-node-util`](https://www.npmjs.com/package/bare-node-util)
+[`util`](https://nodejs.org/api/util.html) | [`bare-utils`](https://github.com/holepunchto/bare-utils) | [`npm:bare-node-util`](https://www.npmjs.com/package/bare-node-util)
 [`v8`](https://nodejs.org/api/v8.html) | None | [`npm:bare-node-v8`](https://www.npmjs.com/package/bare-node-v8)
 [`vm`](https://nodejs.org/api/vm.html) | None | [`npm:bare-node-vm`](https://www.npmjs.com/package/bare-node-vm)
 [`wasi`](https://nodejs.org/api/wasi.html) | None | [`npm:bare-node-wasi`](https://www.npmjs.com/package/bare-node-wasi)

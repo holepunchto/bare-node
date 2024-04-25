@@ -25,6 +25,7 @@ const compatibility = {
   tls: 'bare-tls',
   tty: 'bare-tty',
   url: 'bare-url',
+  util: 'bare-utils',
   worker_threads: 'bare-worker'
 }
 
