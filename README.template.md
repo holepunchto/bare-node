@@ -54,9 +54,7 @@ Say goodbye to broken apps and modules due to Node.js core changes.
 Node.js | Bare | Wrapper
 :--- | :--- | :---
 {{#modules}}
-{{#compatibility}}
-[`{{name}}`](https://nodejs.org/api/{{name}}.html) | [`{{compatibility}}`](https://github.com/holepunchto/{{compatibility}}) | [`npm:{{wrapper}}`](https://www.npmjs.com/package/{{wrapper}})
-{{/compatibility}}
+[`{{name}}`](https://nodejs.org/api/{{name}}.html) | {{#compatibility}}[`{{compatibility}}`](https://github.com/holepunchto/{{compatibility}}){{/compatibility}}{{^compatibility}}None{{/compatibility}} | [`npm:{{wrapper}}`](https://www.npmjs.com/package/{{wrapper}})
 {{/modules}}
 
 ## License
