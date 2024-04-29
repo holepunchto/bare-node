@@ -9,6 +9,7 @@ const compatibility = {
   buffer: 'bare-buffer',
   child_process: 'bare-subprocess',
   console: 'bare-console',
+  crypto: 'bare-crypto',
   events: 'bare-events',
   fs: 'bare-fs',
   http: 'bare-http1',

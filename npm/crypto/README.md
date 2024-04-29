@@ -3,7 +3,7 @@
 Bare compatibility wrapper for the Node.js builtin `crypto` module.
 
 ```
-npm i crypto@npm:bare-node-crypto
+npm i bare-crypto crypto@npm:bare-node-crypto
 ```
 
 ## License
