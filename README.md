@@ -94,7 +94,7 @@ Node.js | Bare | Wrapper
 [`vm`](https://nodejs.org/api/vm.html) | None | [`npm:bare-node-vm`](https://www.npmjs.com/package/bare-node-vm)
 [`wasi`](https://nodejs.org/api/wasi.html) | None | [`npm:bare-node-wasi`](https://www.npmjs.com/package/bare-node-wasi)
 [`worker_threads`](https://nodejs.org/api/worker_threads.html) | [`bare-worker`](https://github.com/holepunchto/bare-worker) | [`npm:bare-node-worker-threads`](https://www.npmjs.com/package/bare-node-worker-threads)
-[`zlib`](https://nodejs.org/api/zlib.html) | None | [`npm:bare-node-zlib`](https://www.npmjs.com/package/bare-node-zlib)
+[`zlib`](https://nodejs.org/api/zlib.html) | [`bare-zlib`](https://github.com/holepunchto/bare-zlib) | [`npm:bare-node-zlib`](https://www.npmjs.com/package/bare-node-zlib)
 
 ## License
 

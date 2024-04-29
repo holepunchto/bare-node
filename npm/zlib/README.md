@@ -3,7 +3,7 @@
 Bare compatibility wrapper for the Node.js builtin `zlib` module.
 
 ```
-npm i zlib@npm:bare-node-zlib
+npm i bare-zlib zlib@npm:bare-node-zlib
 ```
 
 ## License

@@ -26,7 +26,8 @@ const compatibility = {
   tty: 'bare-tty',
   url: 'bare-url',
   util: 'bare-utils',
-  worker_threads: 'bare-worker'
+  worker_threads: 'bare-worker',
+  zlib: 'bare-zlib'
 }
 
 const modules = {}

@@ -1,1 +1,1 @@
-throw new Error('\'zlib\' compatibility is not yet supported')
+module.exports = require('bare-zlib')
