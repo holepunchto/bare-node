@@ -1,6 +1,6 @@
 {
   "name": "bare-node-dns",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Bare compatibility wrapper for the Node.js builtin `dns` module",
   "exports": {
     ".": "./index.js",
@@ -19,5 +19,8 @@
   "bugs": {
     "url": "https://github.com/holepunchto/bare-node/issues"
   },
-  "homepage": "https://github.com/holepunchto/bare-node#readme"
+  "homepage": "https://github.com/holepunchto/bare-node#readme",
+  "dependencies": {
+    "bare-dns": "*"
+  }
 }

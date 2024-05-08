@@ -1,1 +1,1 @@
-throw new Error('\'dns/promises\' compatibility is not yet supported')
+module.exports = require('bare-dns/promises')

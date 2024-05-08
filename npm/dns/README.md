@@ -3,7 +3,7 @@
 Bare compatibility wrapper for the Node.js builtin `dns` module.
 
 ```
-npm i dns@npm:bare-node-dns
+npm i bare-dns dns@npm:bare-node-dns
 ```
 
 ## License

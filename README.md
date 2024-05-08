@@ -63,7 +63,7 @@ Node.js | Bare | Wrapper
 [`crypto`](https://nodejs.org/api/crypto.html) | [`bare-crypto`](https://github.com/holepunchto/bare-crypto) | [`npm:bare-node-crypto`](https://www.npmjs.com/package/bare-node-crypto)
 [`dgram`](https://nodejs.org/api/dgram.html) | None | [`npm:bare-node-dgram`](https://www.npmjs.com/package/bare-node-dgram)
 [`diagnostics_channel`](https://nodejs.org/api/diagnostics_channel.html) | None | [`npm:bare-node-diagnostics-channel`](https://www.npmjs.com/package/bare-node-diagnostics-channel)
-[`dns`](https://nodejs.org/api/dns.html) | None | [`npm:bare-node-dns`](https://www.npmjs.com/package/bare-node-dns)
+[`dns`](https://nodejs.org/api/dns.html) | [`bare-dns`](https://github.com/holepunchto/bare-dns) | [`npm:bare-node-dns`](https://www.npmjs.com/package/bare-node-dns)
 [`domain`](https://nodejs.org/api/domain.html) | None | [`npm:bare-node-domain`](https://www.npmjs.com/package/bare-node-domain)
 [`events`](https://nodejs.org/api/events.html) | [`bare-events`](https://github.com/holepunchto/bare-events) | [`npm:bare-node-events`](https://www.npmjs.com/package/bare-node-events)
 [`fs`](https://nodejs.org/api/fs.html) | [`bare-fs`](https://github.com/holepunchto/bare-fs) | [`npm:bare-node-fs`](https://www.npmjs.com/package/bare-node-fs)
