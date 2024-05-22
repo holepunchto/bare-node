@@ -3,7 +3,7 @@
 Bare compatibility wrapper for the Node.js builtin `net` module.
 
 ```
-npm i net@npm:bare-node-net
+npm i bare-net net@npm:bare-node-net
 ```
 
 ## License

@@ -72,7 +72,7 @@ Node.js | Bare | Wrapper
 [`https`](https://nodejs.org/api/https.html) | [`bare-https`](https://github.com/holepunchto/bare-https) | [`npm:bare-node-https`](https://www.npmjs.com/package/bare-node-https)
 [`inspector`](https://nodejs.org/api/inspector.html) | [`bare-inspector`](https://github.com/holepunchto/bare-inspector) | [`npm:bare-node-inspector`](https://www.npmjs.com/package/bare-node-inspector)
 [`module`](https://nodejs.org/api/module.html) | [`bare-module`](https://github.com/holepunchto/bare-module) | [`npm:bare-node-module`](https://www.npmjs.com/package/bare-node-module)
-[`net`](https://nodejs.org/api/net.html) | None | [`npm:bare-node-net`](https://www.npmjs.com/package/bare-node-net)
+[`net`](https://nodejs.org/api/net.html) | [`bare-net`](https://github.com/holepunchto/bare-net) | [`npm:bare-node-net`](https://www.npmjs.com/package/bare-node-net)
 [`os`](https://nodejs.org/api/os.html) | [`bare-os`](https://github.com/holepunchto/bare-os) | [`npm:bare-node-os`](https://www.npmjs.com/package/bare-node-os)
 [`path`](https://nodejs.org/api/path.html) | [`bare-path`](https://github.com/holepunchto/bare-path) | [`npm:bare-node-path`](https://www.npmjs.com/package/bare-node-path)
 [`perf_hooks`](https://nodejs.org/api/perf_hooks.html) | None | [`npm:bare-node-perf-hooks`](https://www.npmjs.com/package/bare-node-perf-hooks)
