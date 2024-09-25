@@ -10,6 +10,7 @@ const compatibility = {
   child_process: 'bare-subprocess',
   console: 'bare-console',
   crypto: 'bare-crypto',
+  dgram: 'bare-dgram',
   dns: 'bare-dns',
   events: 'bare-events',
   fs: 'bare-fs',

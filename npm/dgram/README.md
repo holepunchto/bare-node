@@ -3,7 +3,7 @@
 Bare compatibility wrapper for the Node.js builtin `dgram` module.
 
 ```
-npm i dgram@npm:bare-node-dgram
+npm i bare-dgram dgram@npm:bare-node-dgram
 ```
 
 ## License
