@@ -22,6 +22,7 @@ const compatibility = {
   os: 'bare-os',
   path: 'bare-path',
   process: 'bare-process',
+  querystring: 'bare-querystring',
   readline: 'bare-readline',
   repl: 'bare-repl',
   stream: 'bare-stream',

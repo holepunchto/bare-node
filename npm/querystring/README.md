@@ -3,7 +3,7 @@
 Bare compatibility wrapper for the Node.js builtin `querystring` module.
 
 ```
-npm i querystring@npm:bare-node-querystring
+npm i bare-querystring querystring@npm:bare-node-querystring
 ```
 
 ## License

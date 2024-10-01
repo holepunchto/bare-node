@@ -78,7 +78,7 @@ Node.js | Bare | Wrapper
 [`perf_hooks`](https://nodejs.org/api/perf_hooks.html) | None | [`npm:bare-node-perf-hooks`](https://www.npmjs.com/package/bare-node-perf-hooks)
 [`process`](https://nodejs.org/api/process.html) | [`bare-process`](https://github.com/holepunchto/bare-process) | [`npm:bare-node-process`](https://www.npmjs.com/package/bare-node-process)
 [`punycode`](https://nodejs.org/api/punycode.html) | None | [`npm:bare-node-punycode`](https://www.npmjs.com/package/bare-node-punycode)
-[`querystring`](https://nodejs.org/api/querystring.html) | None | [`npm:bare-node-querystring`](https://www.npmjs.com/package/bare-node-querystring)
+[`querystring`](https://nodejs.org/api/querystring.html) | [`bare-querystring`](https://github.com/holepunchto/bare-querystring) | [`npm:bare-node-querystring`](https://www.npmjs.com/package/bare-node-querystring)
 [`readline`](https://nodejs.org/api/readline.html) | [`bare-readline`](https://github.com/holepunchto/bare-readline) | [`npm:bare-node-readline`](https://www.npmjs.com/package/bare-node-readline)
 [`repl`](https://nodejs.org/api/repl.html) | [`bare-repl`](https://github.com/holepunchto/bare-repl) | [`npm:bare-node-repl`](https://www.npmjs.com/package/bare-node-repl)
 [`stream`](https://nodejs.org/api/stream.html) | [`bare-stream`](https://github.com/holepunchto/bare-stream) | [`npm:bare-node-stream`](https://www.npmjs.com/package/bare-node-stream)
