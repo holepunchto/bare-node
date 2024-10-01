@@ -3,7 +3,7 @@
 Bare compatibility wrapper for the Node.js builtin `vm` module.
 
 ```
-npm i vm@npm:bare-node-vm
+npm i bare-vm vm@npm:bare-node-vm
 ```
 
 ## License

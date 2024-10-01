@@ -1,1 +1,1 @@
-throw new Error('\'vm\' compatibility is not yet supported')
+module.exports = require('bare-vm')

@@ -30,6 +30,7 @@ const compatibility = {
   tty: 'bare-tty',
   url: 'bare-url',
   util: 'bare-utils',
+  vm: 'bare-vm',
   worker_threads: 'bare-worker',
   zlib: 'bare-zlib'
 }
