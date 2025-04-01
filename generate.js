@@ -2,7 +2,7 @@ import * as Module from 'module'
 import * as fs from 'fs'
 import * as path from 'path'
 import pacote from 'pacote'
-import mustache from 'mustache'
+import prettier from 'prettier'
 
 const compatibility = {
   assert: 'bare-assert',
@@ -36,17 +36,6 @@ const compatibility = {
   zlib: 'bare-zlib'
 }
 
-const obsolete = '⛔️ **Obsolete**'
-const deprecated = '⚠️ **Deprecated**'
-
-const status = {
-  constants: obsolete,
-  domain: deprecated,
-  punycode: deprecated,
-  sys: obsolete,
-  trace_events: obsolete
-}
-
 const modules = {}
 
 const builtins = [...Module.builtinModules]
@@ -57,18 +46,21 @@ const builtins = [...Module.builtinModules]
 for (const builtin of builtins) {
   const [name, subpath = null] = builtin.split('/')
 
-  const mod =
-    modules[name] ||
-    (modules[name] = {
+  let module = modules[name] || null
+
+  if (module === null) {
+    module = modules[name] = {
       name,
       subpaths: [],
       wrapper: `bare-node-${name.replace(/_/g, '-')}`,
-      compatibility: name in compatibility ? compatibility[name] : null,
-      status: name in status ? status[name] : null
-    })
+      compatibility: name in compatibility ? compatibility[name] : null
+    }
+  }
 
-  if (subpath) mod.subpaths.push(subpath)
+  if (subpath) module.subpaths.push(subpath)
 }
+
+const options = await prettier.resolveConfig(import.meta.url)
 
 for (const mod of Object.values(modules)) {
   const dir = path.join('npm', mod.wrapper.replace('bare-node-', ''))
@@ -114,7 +106,14 @@ for (const mod of Object.values(modules)) {
     code = `throw new Error('\\'${mod.name}\\' compatibility is not yet supported')\n`
   }
 
-  fs.writeFileSync(path.join(dir, 'index.js'), code)
+  let filepath
+
+  filepath = path.join(dir, 'index.js')
+
+  fs.writeFileSync(
+    filepath,
+    await prettier.format(code, { ...options, filepath })
+  )
 
   for (const subpath of mod.subpaths) {
     pkg.exports[`./${subpath}`] = `./${subpath}.js`
@@ -129,21 +128,31 @@ for (const mod of Object.values(modules)) {
       code = `throw new Error('\\'${mod.name}/${subpath}\\' compatibility is not yet supported')\n`
     }
 
-    fs.writeFileSync(path.join(dir, `${subpath}.js`), code)
+    filepath = path.join(dir, `${subpath}.js`)
+
+    fs.writeFileSync(
+      filepath,
+      await prettier.format(code, { ...options, filepath })
+    )
   }
 
+  filepath = path.join(dir, 'package.json')
+
   fs.writeFileSync(
-    path.join(dir, 'package.json'),
-    `${JSON.stringify(pkg, null, 2)}\n`
+    filepath,
+    await prettier.format(JSON.stringify(pkg), { ...options, filepath })
   )
 
   for (const file of ['LICENSE', 'NOTICE']) {
     fs.copyFileSync(file, path.join(dir, file))
   }
 
+  filepath = path.join(dir, 'README.md')
+
   fs.writeFileSync(
-    path.join(dir, 'README.md'),
-    `\
+    filepath,
+    await prettier.format(
+      `\
 # ${mod.wrapper}
 
 Bare compatibility wrapper for the Node.js builtin \`${mod.name}\` module.
@@ -155,13 +164,8 @@ npm i ${mod.compatibility ? `${mod.compatibility} ${mod.name}@npm:${mod.wrapper}
 ## License
 
 Apache-2.0
-`
+`,
+      { ...options, filepath }
+    )
   )
 }
-
-fs.writeFileSync(
-  'README.md',
-  mustache.render(fs.readFileSync('README.md.mustache', 'utf8'), {
-    modules: Object.values(modules)
-  })
-)

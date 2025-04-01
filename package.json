@@ -17,7 +17,6 @@
   },
   "homepage": "https://github.com/holepunchto/bare-node#readme",
   "dependencies": {
-    "mustache": "^4.2.0",
     "pacote": "^18.0.2"
   },
   "devDependencies": {
