@@ -43,12 +43,14 @@ for (const builtin of [...Module.builtinModules].sort()) {
 
   const [name, subpath = null] = builtin.split('/')
 
-  const mod = modules[name] || (modules[name] = {
-    name,
-    subpaths: [],
-    wrapper: `bare-node-${name.replace(/_/g, '-')}`,
-    compatibility: name in compatibility ? compatibility[name] : null
-  })
+  const mod =
+    modules[name] ||
+    (modules[name] = {
+      name,
+      subpaths: [],
+      wrapper: `bare-node-${name.replace(/_/g, '-')}`,
+      compatibility: name in compatibility ? compatibility[name] : null
+    })
 
   if (subpath) mod.subpaths.push(subpath)
 }
@@ -74,9 +76,7 @@ for (const mod of Object.values(modules)) {
     exports: {
       '.': './index.js'
     },
-    files: [
-      'index.js'
-    ],
+    files: ['index.js'],
     repository: {
       type: 'git',
       url: 'git+https://github.com/holepunchto/bare-node.git'
@@ -117,13 +117,18 @@ for (const mod of Object.values(modules)) {
     fs.writeFileSync(path.join(dir, `${subpath}.js`), code)
   }
 
-  fs.writeFileSync(path.join(dir, 'package.json'), `${JSON.stringify(pkg, null, 2)}\n`)
+  fs.writeFileSync(
+    path.join(dir, 'package.json'),
+    `${JSON.stringify(pkg, null, 2)}\n`
+  )
 
   for (const file of ['LICENSE', 'NOTICE']) {
     fs.copyFileSync(file, path.join(dir, file))
   }
 
-  fs.writeFileSync(path.join(dir, 'README.md'), `\
+  fs.writeFileSync(
+    path.join(dir, 'README.md'),
+    `\
 # ${mod.wrapper}
 
 Bare compatibility wrapper for the Node.js builtin \`${mod.name}\` module.
@@ -139,6 +144,9 @@ Apache-2.0
   )
 }
 
-fs.writeFileSync('README.md', mustache.render(fs.readFileSync('README.template.md', 'utf8'), {
-  modules: Object.values(modules)
-}))
+fs.writeFileSync(
+  'README.md',
+  mustache.render(fs.readFileSync('README.md.mustache', 'utf8'), {
+    modules: Object.values(modules)
+  })
+)

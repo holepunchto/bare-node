@@ -39,7 +39,7 @@ When writing a module that uses a Node.js builtin, such as `fs`, you can also ch
       "default": "fs/*"
     }
   },
-  "optionalDependencies": {
+  "dependencies": {
     "bare-fs": "^2.1.5"
   }
 }
@@ -51,8 +51,8 @@ Say goodbye to broken apps and modules due to Node.js core changes.
 
 ## Modules
 
-Node.js | Bare | Wrapper
-:--- | :--- | :---
+| Node.js | Bare | Wrapper |
+| :------ | :--- | :------ |
 {{#modules}}
 [`{{name}}`](https://nodejs.org/api/{{name}}.html) | {{#compatibility}}[`{{compatibility}}`](https://github.com/holepunchto/{{compatibility}}){{/compatibility}}{{^compatibility}}None{{/compatibility}} | [`npm:{{wrapper}}`](https://www.npmjs.com/package/{{wrapper}})
 {{/modules}}

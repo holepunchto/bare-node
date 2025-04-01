@@ -1,1 +1,1 @@
-throw new Error('\'sys\' compatibility is not yet supported')
+throw new Error("'sys' compatibility is not yet supported")

@@ -1,1 +1,1 @@
-throw new Error('\'domain\' compatibility is not yet supported')
+throw new Error("'domain' compatibility is not yet supported")

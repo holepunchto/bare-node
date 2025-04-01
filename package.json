@@ -3,6 +3,9 @@
   "type": "module",
   "name": "bare-node",
   "description": "Compatibility modules for Node.js builtins in Bare",
+  "scripts": {
+    "test": "prettier . --check"
+  },
   "repository": {
     "type": "git",
     "url": "git+https://github.com/holepunchto/bare-node.git"
@@ -16,5 +19,9 @@
   "dependencies": {
     "mustache": "^4.2.0",
     "pacote": "^18.0.2"
+  },
+  "devDependencies": {
+    "prettier": "^3.5.3",
+    "prettier-config-standard": "^7.0.0"
   }
 }

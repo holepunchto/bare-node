@@ -1,1 +1,1 @@
-throw new Error('\'constants\' compatibility is not yet supported')
+throw new Error("'constants' compatibility is not yet supported")

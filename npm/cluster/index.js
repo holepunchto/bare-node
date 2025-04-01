@@ -1,1 +1,1 @@
-throw new Error('\'cluster\' compatibility is not yet supported')
+throw new Error("'cluster' compatibility is not yet supported")

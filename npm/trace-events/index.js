@@ -1,1 +1,1 @@
-throw new Error('\'trace_events\' compatibility is not yet supported')
+throw new Error("'trace_events' compatibility is not yet supported")
