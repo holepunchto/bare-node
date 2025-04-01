@@ -51,10 +51,10 @@ Say goodbye to broken apps and modules due to Node.js core changes.
 
 ## Modules
 
-| Node.js | Bare | Wrapper |
-| :------ | :--- | :------ |
+| Node.js | Bare | Wrapper | Status |
+| :------ | :--- | :------ | :----- |
 {{#modules}}
-[`{{name}}`](https://nodejs.org/api/{{name}}.html) | {{#compatibility}}[`{{compatibility}}`](https://github.com/holepunchto/{{compatibility}}){{/compatibility}}{{^compatibility}}None{{/compatibility}} | [`npm:{{wrapper}}`](https://www.npmjs.com/package/{{wrapper}})
+[`{{name}}`](https://nodejs.org/api/{{name}}.html) | {{#compatibility}}[`{{compatibility}}`](https://github.com/holepunchto/{{compatibility}}){{/compatibility}}{{^compatibility}}None{{/compatibility}} | [`npm:{{wrapper}}`](https://www.npmjs.com/package/{{wrapper}}) | {{status}}
 {{/modules}}
 
 ## License

@@ -36,11 +36,25 @@ const compatibility = {
   zlib: 'bare-zlib'
 }
 
+const obsolete = '⛔️ **Obsolete**'
+const deprecated = '⚠️ **Deprecated**'
+
+const status = {
+  constants: obsolete,
+  domain: deprecated,
+  punycode: deprecated,
+  sys: obsolete,
+  trace_events: obsolete
+}
+
 const modules = {}
 
-for (const builtin of [...Module.builtinModules].sort()) {
-  if (builtin.startsWith('_')) continue
+const builtins = [...Module.builtinModules]
+  .filter((builtin) => !builtin.startsWith('_'))
+  .map((builtin) => builtin.replace(/^node:/, ''))
+  .sort()
 
+for (const builtin of builtins) {
   const [name, subpath = null] = builtin.split('/')
 
   const mod =
@@ -49,7 +63,8 @@ for (const builtin of [...Module.builtinModules].sort()) {
       name,
       subpaths: [],
       wrapper: `bare-node-${name.replace(/_/g, '-')}`,
-      compatibility: name in compatibility ? compatibility[name] : null
+      compatibility: name in compatibility ? compatibility[name] : null,
+      status: name in status ? status[name] : null
     })
 
   if (subpath) mod.subpaths.push(subpath)
