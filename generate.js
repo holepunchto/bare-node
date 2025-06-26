@@ -21,6 +21,7 @@ const compatibility = {
   net: 'bare-net',
   os: 'bare-os',
   path: 'bare-path',
+  perf_hooks: 'bare-performance',
   process: 'bare-process',
   querystring: 'bare-querystring',
   readline: 'bare-readline',

@@ -3,7 +3,7 @@
 Bare compatibility wrapper for the Node.js builtin `perf_hooks` module.
 
 ```
-npm i perf_hooks@npm:bare-node-perf-hooks
+npm i bare-performance perf_hooks@npm:bare-node-perf-hooks
 ```
 
 ## License
