@@ -1,1 +1,1 @@
-throw new Error("'async_hooks' compatibility is not yet supported")
+module.exports = require('bare-async-hooks')

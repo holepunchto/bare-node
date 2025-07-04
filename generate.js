@@ -6,6 +6,7 @@ import prettier from 'prettier'
 
 const compatibility = {
   assert: 'bare-assert',
+  async_hooks: 'bare-async-hooks',
   buffer: 'bare-buffer',
   child_process: 'bare-subprocess',
   console: 'bare-console',
