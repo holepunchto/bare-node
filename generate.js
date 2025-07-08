@@ -28,6 +28,7 @@ const compatibility = {
   readline: 'bare-readline',
   repl: 'bare-repl',
   stream: 'bare-stream',
+  string_decoder: 'text-decoder',
   timers: 'bare-timers',
   tls: 'bare-tls',
   tty: 'bare-tty',

@@ -1,6 +1,6 @@
 {
   "name": "bare-node-string-decoder",
-  "version": "0.0.1",
+  "version": "1.0.0",
   "description": "Bare compatibility wrapper for the Node.js builtin `string_decoder` module",
   "exports": {
     ".": "./index.js"
@@ -17,5 +17,8 @@
   "bugs": {
     "url": "https://github.com/holepunchto/bare-node/issues"
   },
-  "homepage": "https://github.com/holepunchto/bare-node#readme"
+  "homepage": "https://github.com/holepunchto/bare-node#readme",
+  "dependencies": {
+    "text-decoder": "*"
+  }
 }
