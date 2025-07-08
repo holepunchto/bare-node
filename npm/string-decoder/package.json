@@ -19,6 +19,6 @@
   },
   "homepage": "https://github.com/holepunchto/bare-node#readme",
   "dependencies": {
-    "text-decoder": "*"
+    "bare-string-decoder": "*"
   }
 }
