@@ -1,1 +1,1 @@
-module.exports = require('text-decoder')
+exports.StringDecoder = require('text-decoder')
