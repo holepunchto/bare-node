@@ -3,7 +3,7 @@
 Bare compatibility wrapper for the Node.js builtin `string_decoder` module.
 
 ```
-npm i string_decoder@npm:bare-node-string-decoder
+npm i bare-string-decoder string_decoder@npm:bare-node-string-decoder
 ```
 
 ## License
