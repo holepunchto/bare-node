@@ -1,6 +1,5 @@
 {
   "private": true,
-  "type": "module",
   "name": "bare-node",
   "description": "Compatibility modules for Node.js builtins in Bare",
   "scripts": {
@@ -16,10 +15,8 @@
     "url": "https://github.com/holepunchto/bare-node/issues"
   },
   "homepage": "https://github.com/holepunchto/bare-node#readme",
-  "dependencies": {
-    "pacote": "^18.0.2"
-  },
   "devDependencies": {
+    "pacote": "^18.0.2",
     "prettier": "^3.5.3",
     "prettier-config-standard": "^7.0.0"
   }
