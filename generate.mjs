@@ -12,6 +12,7 @@ const compatibility = {
   console: 'bare-console',
   crypto: 'bare-crypto',
   dgram: 'bare-dgram',
+  diagnostics_channel: 'bare-diagnostics-channel',
   dns: 'bare-dns',
   events: 'bare-events',
   fs: 'bare-fs',
