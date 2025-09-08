@@ -1,0 +1,5 @@
+require('bare-crypto/global')
+require('bare-encoding/global')
+require('bare-fetch/global')
+require('bare-process/global')
+require('bare-stream/global')
