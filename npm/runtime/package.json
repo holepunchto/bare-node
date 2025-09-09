@@ -1,5 +1,5 @@
 {
-  "name": "bare-node",
+  "name": "bare-node-runtime",
   "version": "1.0.0",
   "description": "Bare utilities for Node.js compatibility",
   "exports": {
@@ -13,14 +13,14 @@
   ],
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/holepunchto/bare-node.git"
+    "url": "git+https://github.com/holepunchto/bare-node-runtime.git"
   },
   "author": "Holepunch",
   "license": "Apache-2.0",
   "bugs": {
-    "url": "https://github.com/holepunchto/bare-node/issues"
+    "url": "https://github.com/holepunchto/bare-node-runtime/issues"
   },
-  "homepage": "https://github.com/holepunchto/bare-node#readme",
+  "homepage": "https://github.com/holepunchto/bare-node-runtime#readme",
   "dependencies": {
     "bare-assert": "^1.1.0",
     "bare-async-hooks": "^0.0.0",
