@@ -1,3 +1,4 @@
+require('bare-abort-controller/global')
 require('bare-crypto/global')
 require('bare-encoding/global')
 require('bare-events/global')

@@ -22,6 +22,7 @@
   },
   "homepage": "https://github.com/holepunchto/bare-node-runtime#readme",
   "dependencies": {
+    "bare-abort-controller": "^1.0.0",
     "bare-assert": "^1.1.0",
     "bare-async-hooks": "^0.0.0",
     "bare-buffer": "^3.3.1",
