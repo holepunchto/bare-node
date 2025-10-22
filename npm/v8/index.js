@@ -1,1 +1,1 @@
-throw new Error("'v8' compatibility is not yet supported")
+module.exports = require('bare-v8')
