@@ -25,6 +25,7 @@ const compatibility = {
   path: 'bare-path',
   perf_hooks: 'bare-performance',
   process: 'bare-process',
+  punycode: 'bare-punycode',
   querystring: 'bare-querystring',
   readline: 'bare-readline',
   repl: 'bare-repl',
