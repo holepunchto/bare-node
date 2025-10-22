@@ -36,6 +36,7 @@ const compatibility = {
   tty: 'bare-tty',
   url: 'bare-url',
   util: 'bare-utils',
+  v8: 'bare-v8',
   vm: 'bare-vm',
   worker_threads: 'bare-worker',
   zlib: 'bare-zlib'
