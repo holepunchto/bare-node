@@ -116,10 +116,7 @@ for (const mod of Object.values(modules)) {
 
   filepath = path.join(dir, 'index.js')
 
-  fs.writeFileSync(
-    filepath,
-    await prettier.format(code, { ...options, filepath })
-  )
+  fs.writeFileSync(filepath, await prettier.format(code, { ...options, filepath }))
 
   for (const subpath of mod.subpaths) {
     pkg.exports[`./${subpath}`] = `./${subpath}.js`
@@ -136,18 +133,12 @@ for (const mod of Object.values(modules)) {
 
     filepath = path.join(dir, `${subpath}.js`)
 
-    fs.writeFileSync(
-      filepath,
-      await prettier.format(code, { ...options, filepath })
-    )
+    fs.writeFileSync(filepath, await prettier.format(code, { ...options, filepath }))
   }
 
   filepath = path.join(dir, 'package.json')
 
-  fs.writeFileSync(
-    filepath,
-    await prettier.format(JSON.stringify(pkg), { ...options, filepath })
-  )
+  fs.writeFileSync(filepath, await prettier.format(JSON.stringify(pkg), { ...options, filepath }))
 
   for (const file of ['LICENSE', 'NOTICE']) {
     fs.copyFileSync(file, path.join(dir, file))
