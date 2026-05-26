@@ -3,7 +3,7 @@
 Bare compatibility wrapper for the Node.js builtin `sqlite` module.
 
 ```
-npm i sqlite@npm:bare-node-sqlite
+npm i bare-sqlite sqlite@npm:bare-node-sqlite
 ```
 
 ## License

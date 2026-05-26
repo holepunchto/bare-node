@@ -29,6 +29,7 @@ const compatibility = {
   querystring: 'bare-querystring',
   readline: 'bare-readline',
   repl: 'bare-repl',
+  sqlite: 'bare-sqlite',
   stream: 'bare-stream',
   string_decoder: 'bare-string-decoder',
   timers: 'bare-timers',
