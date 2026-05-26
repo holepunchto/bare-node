@@ -1,1 +1,1 @@
-throw new Error("'sqlite' compatibility is not yet supported")
+module.exports = require('bare-sqlite')
